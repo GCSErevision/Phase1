@@ -1,0 +1,312 @@
+<!doctype html>
+<html>
+    <head>
+        <title>learnX</title>
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">  
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-blue.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    </head>
+    <body>
+        <style>
+            * {
+                margin: 0;
+                outline: 0;
+                color: #fff;
+            }
+            html {
+                width: 100%;
+                height: 100%;
+            }
+            body {
+                background: #191919;
+                font-family: "Roboto", sans-serif;
+                padding: 16px;
+                text-align: center;
+            }
+            header {
+                margin: 40px 0;
+            }
+            h1, h2, h3, h4, h5, p {
+                margin: 0;
+            }
+            h1 {
+                margin: 0 auto 10px auto;
+                font-size: 3.8em;
+                width: 155px;
+                background: linear-gradient(to right, #16a869, #1cd1b0);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            h2 {
+                font-size: 1.6em;
+                font-weight: 500;
+                margin-bottom: 7px;
+            }
+            h4 {
+                font-size: 1.4em;
+                font-weight: 400;
+            }
+            h5 {
+                font-size: 1.3em;
+                font-weight: 400;
+                color: rgba(255, 255, 255, 0.87);
+                margin-bottom: 30px;
+            }
+            #changing-word { 
+                transition: all 3s ease-in;
+            }
+            table {
+                margin: 0 auto;
+                border-spacing: 0 5px;
+            }
+            .table-container {
+                overflow-x: auto;
+            }
+            tbody {
+                border-spacing: 0 10px;
+            }
+            th {
+                font-size: 1.3em;
+                font-weight: 500;
+            }
+            td {
+                font-size: 1.05em;
+                font-weight: 400;
+                color: #000;
+            }
+            tr > td:first-child {
+                border-top-left-radius: 2px;
+                border-bottom-left-radius: 2px;
+            }
+            tr > td:last-child {
+                border-top-right-radius: 2px;
+                border-bottom-right-radius: 2px;
+            }
+            th, td {
+                padding: 11px 20px;
+            }
+            tr {
+                box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+                background: #fff;
+                border-radius: 2px;
+                padding: 3px 0;
+                transition: all 0.2s ease-in-out;
+            }
+            tr:first-child {
+                background: transparent;
+                box-shadow: none;
+            }
+            .mdl-textfield {
+                padding: 0 0 20px 0 !important;
+                width: 200px !important;
+                margin-bottom: 30px;
+            }
+            .mdl-textfield__label {
+                top: 4px !important;
+                color: rgba(255, 255, 255, .56) !important;
+            }
+            .mdl-textfield__input {
+                border-bottom: 1px solid rgba(255, 255, 255, .56) !important;
+                font-family: "Roboto", sans-serif !important;
+            }
+            .subject-selected {
+                background: #009688 !important;
+            }
+            .subject-selected > td {
+                color: #fff !important;
+            }
+            #changing-word-container {
+                display: inline;
+            }
+            .changing-word:first-child {
+                opacity: 100;
+                display: inline;
+            }
+            .changing-word {
+                display: none;
+                opacity: 0;
+                transition: all 2s ease-in-out;
+            }
+        </style>
+        <header>
+            <h1>learnX</h1>
+            <h4>Using the power of the community to create <div id="changing-word-container">
+                <span class="changing-word">exciting</span>
+                <span class="changing-word">extravagant</span>
+                <span class="changing-word">extensive</span>
+            </div> revision material</h4>
+        </header>
+        <main>
+            <h2>What subject are you revising?</h2>
+            <form action="#">
+                <div class="mdl-textfield mdl-js-textfield">
+                    <input class="mdl-textfield__input" type="text" id="subject-search">
+                    <label class="mdl-textfield__label" for="subject-search">e.g. Maths</label>
+                </div>
+            </form>
+            <h5>Or browse our resources by subject</h5>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Exam board</th>
+                        <th>Specification</th>
+                        <th>Exam date</th>
+                        <th>Questions</th>
+                        <th>Version</th>
+                    </tr>
+                    <tr>
+                        <td>Maths</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Additional Maths</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Biology</td>
+                        <td>AQA</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0.0.2</td>
+                    </tr>
+                    <tr>
+                        <td>Chemistry</td>
+                        <td>AQA</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0.0.1</td>
+                    </tr>
+                    <tr>
+                        <td>Physics</td>
+                        <td>AQA</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0.0.1</td>
+                    </tr>
+                    <tr>
+                        <td>Computer Science</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Spanish</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>English (Lit &amp; Lang)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>History</td>
+                        <td>AQA</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Geography</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Business Studies</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </main>
+        <script>
+            // Subtitle word change
+            function changeSubtitle() {
+                var counter = -1;
+                var wordElements = document.getElementsByClassName("changing-word");
+                setInterval(function(){ 
+                    counter += 1;
+                    if (counter == wordElements.length) {
+                        counter = 0;
+                    }
+                    if (counter == 0) {
+                        wordElements[wordElements.length - 1].setAttribute("style","opacity: 0; display: none;");
+                        wordElements[counter].setAttribute("style","opacity: 100; display: inline;");
+                    } else {
+                        wordElements[counter].previousElementSibling.setAttribute("style","opacity: 0; display: none;");
+                        wordElements[counter].setAttribute("style","opacity: 100; display: inline;");
+                    }
+                }, 5000);
+            }
+
+            // Pulls subjects from tables
+            function getSubjects() {
+                var subjects = [];
+                var rows = document.getElementsByTagName("tr");
+                for (var i = 1; i < rows.length; i++) {
+                    subjects.push(rows[i].querySelector("*"));
+                }
+                return subjects;
+            }
+
+            // Realtime subject search
+            function initSearch() {
+                subjects = getSubjects();
+                document.getElementById("subject-search").addEventListener('input', function (evt) {
+                    var searchContent = document.getElementById("subject-search").value;
+                    if (searchContent == "") {
+                        for (var i = 0; i < subjects.length; i++) {
+                            if (subjects[i].parentElement.className == "subject-selected") {
+                                subjects[i].parentElement.className = "";
+                            }
+                        }
+                    } else {
+                        for (var i = 0; i < subjects.length; i++) {
+                            if (subjects[i].innerHTML == searchContent) {
+                                subjects[i].parentElement.className = "subject-selected";
+                            } else if (subjects[i].innerHTML.slice(0, searchContent.length) == searchContent) {
+                                subjects[i].parentElement.className = "subject-selected";
+                            } else {
+                                if (subjects[i].parentElement.className == "subject-selected") {
+                                    subjects[i].parentElement.className = "";
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            changeSubtitle();
+            initSearch();
+        </script>
+    </body>
+</html>
