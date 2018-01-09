@@ -3,7 +3,7 @@
     <head>
         <title>learnX</title>
         <meta name=viewport content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">  
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
         <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-blue.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
@@ -55,7 +55,7 @@
                 color: rgba(255, 255, 255, 0.87);
                 margin-bottom: 30px;
             }
-            #changing-word { 
+            #changing-word {
                 transition: all 3s ease-in;
             }
             table {
@@ -129,15 +129,17 @@
                 display: none;
                 opacity: 0;
                 transition: all 2s ease-in-out;
+                color: red;
             }
         </style>
         <header>
             <h1>learnX</h1>
-            <h4>Using the power of the community to create <div id="changing-word-container">
-                <span class="changing-word">exciting</span>
-                <span class="changing-word">extravagant</span>
-                <span class="changing-word">extensive</span>
-            </div> revision material</h4>
+            <h4>Revisions materials provided for free by <div id="changing-word-container">
+                <span class="changing-word">Hoix</span>
+                <span class="changing-word">Atomicsong</span>
+                <span class="changing-word">Yeezy</span>
+                <span class="changing-word">MattyAB</span>
+            </div> and the rest of the Learn X community.</h4>
         </header>
         <main>
             <h2>What subject are you revising?</h2>
@@ -254,7 +256,7 @@
             function changeSubtitle() {
                 var counter = -1;
                 var wordElements = document.getElementsByClassName("changing-word");
-                setInterval(function(){ 
+                setInterval(function(){
                     counter += 1;
                     if (counter == wordElements.length) {
                         counter = 0;
